@@ -146,7 +146,7 @@ const LayoutSlug = (props) => {
 /**
  * 搜索页
  */
-const LayoutSearch = props => {
+/*const LayoutSearch = props => {
   const { keyword } = props
   const router = useRouter()
   useEffect(() => {
@@ -163,7 +163,7 @@ const LayoutSearch = props => {
   }, [router])
   return <LayoutPostList {...props} />
 }
-
+*/
 /**
  * 归档页面
  */
@@ -196,7 +196,7 @@ const Layout404 = props => {
  * @param {*} props
             * @returns
             */
-const LayoutCategoryIndex = (props) => {
+/*const LayoutCategoryIndex = (props) => {
   const { locale } = useGlobal()
   const { categoryOptions } = props
   return (
@@ -225,7 +225,7 @@ const LayoutCategoryIndex = (props) => {
     </>
   )
 }
-
+*/
 /**
  * 标签列表
  * @param {*} props
