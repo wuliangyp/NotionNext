@@ -28,6 +28,15 @@ const WalineComponent = (props) => {
         el: containerRef.current,
         serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
         lang: siteConfig('LANG'),
+        locale: {
+          placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
+          reaction0: "喜歡",
+          reaction1: "歡呼",
+          reaction2: "疑惑",
+          reaction3: "震驚",
+          reaction4: "傷心",
+          },
+        reaction: true,
         reaction: [
           'https://chojugiga.com/c/choju93_0020/choju93_0020.png',
           'https://chojugiga.com/c/choju71_0014/choju71_0014.png',
@@ -42,7 +51,6 @@ const WalineComponent = (props) => {
         highlight: true, //# 代码高亮，默认true
         meta: ["nick", "mail", "link"], //# 评论者相关属性，默认['nick', 'mail', 'link']
         requiredMeta: ["nick", "mail"], //设置评论者属性必填项，默认[]（即匿名）
-        placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
         copyright: false, //是否显示页脚版权信息
         emoji: [
           "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji",
