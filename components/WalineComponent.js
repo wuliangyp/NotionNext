@@ -12,7 +12,7 @@ let waline = null
  * @returns
  */
 const WalineComponent = (props) => {
-  const containerRef = createRef() 
+  const containerRef = createRef()
   const router = useRouter()
 
   const updateWaline = url => {
