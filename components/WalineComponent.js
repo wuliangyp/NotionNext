@@ -38,7 +38,7 @@ const WalineComponent = (props) => {
           'https://cdn-icons-png.flaticon.com/128/8208/8208813.png',
           'https://cdn-icons-png.flaticon.com/128/8208/8208756.png',
           'https://cdn-icons-png.flaticon.com/128/8208/8208902.png',
-          'https://cdn-icons-png.flaticon.com/128/8208/8208766.png',
+          'https://cdn-icons-png.flaticon.com/128/8208/8208766.png'
         ],
         locale: {
           nick: '昵称　Name',
