@@ -20,14 +20,14 @@ const WalineComponent = (props) => {
       waline.update(props)
     }
   }
-  const locale = {
-    placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
-    sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
-    reaction0: "give me five",
+  //const locale = {
+  //  placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
+  //  sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
+  //  reaction0: "give me five",
     //reaction1: "鼓个掌",
     //reaction2: "不赞成",
     //reaction3: "祝好运",
-  }
+  //}
 
   React.useEffect(() => {
     if (!waline) {
