@@ -4,6 +4,12 @@ import { useRouter } from 'next/router'
 import '@waline/client/dist/waline.css'
 import { siteConfig } from '@/lib/config'
 
+Waline.init({
+  el: '#waline',
+  // ...
+  reaction: false, // 是否开启反应
+});
+
 const path = ''
 let waline = null
 /**
