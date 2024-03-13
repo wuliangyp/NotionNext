@@ -12,7 +12,7 @@ let waline = null
  * @returns
  */
 const WalineComponent = (props) => {
-  const containerRef = createRef()
+  const containerRef = React.createRef() //原本无React.，据【https://github.com/lifeafter619/NotionNext/blob/6062ddd6b6b3fc7e3901e7edec65e4ff116208e1/components/WalineComponent.js#L30】改
   const router = useRouter()
 
   const updateWaline = url => {
