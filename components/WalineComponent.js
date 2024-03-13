@@ -30,11 +30,19 @@ const WalineComponent = (props) => {
         lang: siteConfig('LANG'),
         reaction: false,
         dark: 'html.dark',
+        login: "enable", //# 登录模式状态，默认值enable，force可以强制登录
+        wordLimit: 800, //# 评论字数限制，0为不限制，默认值为0
+        pageSize: 10, //# 评论列表分页，数字为条数，默认值10
+        highlight: true, //# 代码高亮，默认true
+        meta: ["nick", "mail", "link"], //# 评论者相关属性，默认['nick', 'mail', 'link']
+        requiredMeta: ["nick", "mail"], //设置评论者属性必填项，默认[]（即匿名）
+        placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
+        copyright: false, //是否显示页脚版权信息
         emoji: [
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/tieba',
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/weibo',
-          '//npm.elemecdn.com/@waline/emojis@1.1.0/bilibili'
-        ]
+          "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji",
+          "https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs",
+          "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili"
+        ] //自定义表情包
       })
     }
 
