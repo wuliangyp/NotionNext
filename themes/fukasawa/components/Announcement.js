@@ -8,9 +8,9 @@ const Announcement = ({ post, className }) => {
   if (post?.blockMap) {
     return <div className={className}>
         <section id='announcement-wrapper' className="dark:text-gray-300 rounded-xl px-2 py-4">
-            <div><i className='mr-2 fas fa-bullhorn' />{locale.COMMON.ANNOUNCEMENT}</div>
+            <div><i className='mr-2 fa-solid fa-flag' />{locale.COMMON.ANNOUNCEMENT}</div>
             {post && (<div id="announcement-content">
-            <NotionPage post={post} className='text-center ' />
+            <NotionPage post={post} className='text-left ' />
         </div>)}
         </section>
     </div>
