@@ -28,7 +28,13 @@ const WalineComponent = (props) => {
         el: containerRef.current,
         serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
         lang: siteConfig('LANG'),
-        reaction: false,
+        reaction: [
+          'https://chojugiga.com/c/choju93_0020/choju93_0020.png',
+          'https://chojugiga.com/c/choju71_0014/choju71_0014.png',
+          'https://chojugiga.com/c/choju74_0006/choju74_0006.png',
+          'https://chojugiga.com/c/choju89_0030/choju89_0030.png',
+          'https://chojugiga.com/c/choju28_0015/choju28_0015.png',
+        ],
         dark: 'html.dark',
         login: "enable", //# 登录模式状态，默认值enable，force可以强制登录
         wordLimit: 800, //# 评论字数限制，0为不限制，默认值为0
