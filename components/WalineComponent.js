@@ -20,25 +20,26 @@ const WalineComponent = (props) => {
       waline.update(props)
     }
   }
+  const locale = {
+    placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
+    nickError: '昵称不能少于3个字符',
+    reaction0: "喜歡",
+    reaction1: "歡呼",
+    reaction2: "疑惑",
+    reaction3: "震驚",
+    reaction4: "傷心"
+  }
 
   React.useEffect(() => {
     if (!waline) {
       waline = init({
         ...props,
         el: containerRef.current,
+        locale,
         serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
         lang: siteConfig('LANG'),
-        locale: {
-          placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
-          reaction0: "喜歡",
-          reaction1: "歡呼",
-          reaction2: "疑惑",
-          reaction3: "震驚",
-          reaction4: "傷心",
-          },
-        reaction: true,
         reaction: [
-          'https://chojugiga.com/c/choju93_0020/choju93_0020.png',
+          'https://chojugiga.com/c/choju93_0020/choju93_0020.png', // 评论区反应功能，默认为reaction: true,
           'https://chojugiga.com/c/choju71_0014/choju71_0014.png',
           'https://chojugiga.com/c/choju74_0006/choju74_0006.png',
           'https://chojugiga.com/c/choju89_0030/choju89_0030.png',
