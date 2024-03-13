@@ -41,19 +41,21 @@ const WalineComponent = (props) => {
           'https://cdn-icons-png.flaticon.com/128/8208/8208766.png'
         ],
         locale: {
-          nick: '昵称　Name',
+          nick: '昵称 Name',
           mail: '邮箱 Email',
           mailError: '请填写正确的邮件地址',
           link: '您的网址 Link',
           optional: '可选',
-          placeholder: '何事沉吟？发一条友善的评论见证当下。Be nice and play well with others.',
-          sofa: '你好探险家，这里是人迹罕至的评论区大陆。　Be the first to comment!',
-          reactionTitle: '一键心情  One-Click Mood',
-          reaction0: '喜歡 Like',
-          reaction1: '击掌 High Five',
-          reaction2: '鼓掌 Cheers',
-          reaction3: '不贊成 Disagree',
-          reaction4: '祝好運 Good luck'
+          login: '登录 Log in',
+          submit: '发送 Send',
+          placeholder: '何事沉吟？发一条友善的评论见证当下。\nBe nice and play well with others.',
+          sofa: '你好探险家，这里是人迹罕至的评论区大陆。\nBe the first to comment!',
+          reactionTitle: '一键心情\nOne-Click Mood',
+          reaction0: '喜歡\nLike',
+          reaction1: '击掌\nHigh Five',
+          reaction2: '鼓掌\nCheers',
+          reaction3: '不贊成\nDisagree',
+          reaction4: '祝好運\nGood luck'
         }
       })
     }
