@@ -28,32 +28,17 @@ const WalineComponent = (props) => {
         el: containerRef.current,
         serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
         lang: siteConfig('LANG'),
-        locale: {
-          nick: '昵称',
-          nickError: '昵称不能少于3个字符哦...',
-          mail: '邮箱',
-          mailError: '请填写正确的邮件地址',
-          link: '您的网址',
-          optional: '可选',
-          placeholder: "何事沉吟？",
-          sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
-          reactionTitle: '击掌！',
-          reaction0: "give me five",
-          reaction1: "鼓个掌",
-          reaction2: "不赞成",
-          reaction3: "祝好运",
-        },
-        reaction: [
-          'https://cdn-icons-png.flaticon.com/128/8208/8208813.png',
-          'https://cdn-icons-png.flaticon.com/128/8208/8208756.png',
-          'https://cdn-icons-png.flaticon.com/128/8208/8208902.png',
-          'https://cdn-icons-png.flaticon.com/128/8208/8208766.png',
-        ],
         dark: 'html.dark',
         emoji: [
           "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji",
           "https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs",
           "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili",
+        ],
+        reaction: [
+          'https://cdn-icons-png.flaticon.com/128/8208/8208813.png',
+          'https://cdn-icons-png.flaticon.com/128/8208/8208756.png',
+          'https://cdn-icons-png.flaticon.com/128/8208/8208902.png',
+          'https://cdn-icons-png.flaticon.com/128/8208/8208766.png',
         ],
       });
     }
