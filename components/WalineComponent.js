@@ -12,7 +12,7 @@ let waline = null
  * @returns
  */
 const WalineComponent = (props) => {
-  const containerRef = React.createRef() //原本无React.，据【https://github.com/lifeafter619/NotionNext/blob/6062ddd6b6b3fc7e3901e7edec65e4ff116208e1/components/WalineComponent.js#L30】改
+  const containerRef = createRef() //原本无React.，据【https://github.com/lifeafter619/NotionNext/blob/6062ddd6b6b3fc7e3901e7edec65e4ff116208e1/components/WalineComponent.js#L30】改
   const router = useRouter()
 
   const updateWaline = url => {
@@ -22,12 +22,13 @@ const WalineComponent = (props) => {
   }
   const locale = {
     placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
+    sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
     nickError: '昵称不能少于3个字符',
     reaction0: "喜歡",
     reaction1: "歡呼",
     reaction2: "疑惑",
     reaction3: "震驚",
-    reaction4: "傷心"
+    reaction4: "傷心",
   }
 
   React.useEffect(() => {
@@ -35,9 +36,18 @@ const WalineComponent = (props) => {
       waline = init({
         ...props,
         el: containerRef.current,
-        locale,
         serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
         lang: siteConfig('LANG'),
+        locale: {
+          ...locale,
+          placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
+          sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
+          reaction0: "喜歡",
+          reaction1: "歡呼",
+          reaction2: "疑惑",
+          reaction3: "震驚",
+          reaction4: "傷心",
+        },
         reaction: [
           'https://chojugiga.com/c/choju93_0020/choju93_0020.png', // 评论区反应功能，默认为reaction: true,
           'https://chojugiga.com/c/choju71_0014/choju71_0014.png',
@@ -56,9 +66,9 @@ const WalineComponent = (props) => {
         emoji: [
           "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji",
           "https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs",
-          "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili"
-        ] //自定义表情包
-      })
+          "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili",
+        ], //自定义表情包
+      });
     }
 
     // 跳转评论
