@@ -44,7 +44,6 @@ const WalineComponent = (props) => {
         serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
         lang: siteConfig('LANG'),
         locale,
-        reaction: true,
         reaction: [ // 评论区反应功能，默认为reaction: true,
           'https://cdn-icons-png.flaticon.com/128/8208/8208813.png', // give me five
           'https://cdn-icons-png.flaticon.com/128/8208/8208756.png', // 鼓个掌
