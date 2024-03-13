@@ -23,12 +23,10 @@ const WalineComponent = (props) => {
   const locale = {
     placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
     sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
-    nickError: '昵称不能少于3个字符',
-    reaction0: "喜歡",
-    reaction1: "歡呼",
-    reaction2: "疑惑",
-    reaction3: "震驚",
-    reaction4: "傷心",
+    reaction0: "give me five",
+    reaction1: "鼓个掌",
+    reaction2: "不赞成",
+    reaction3: "祝好运",
   }
 
   React.useEffect(() => {
@@ -41,18 +39,16 @@ const WalineComponent = (props) => {
         locale: {
           placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
           sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
-          reaction0: "喜歡",
-          reaction1: "歡呼",
-          reaction2: "疑惑",
-          reaction3: "震驚",
-          reaction4: "傷心",
+          reaction0: "give me five",
+          reaction1: "鼓个掌",
+          reaction2: "不赞成",
+          reaction3: "祝好运",
         },
-        reaction: [
-          'https://chojugiga.com/c/choju93_0020/choju93_0020.png', // 评论区反应功能，默认为reaction: true,
-          'https://chojugiga.com/c/choju71_0014/choju71_0014.png',
-          'https://chojugiga.com/c/choju74_0006/choju74_0006.png',
-          'https://chojugiga.com/c/choju89_0030/choju89_0030.png',
-          'https://chojugiga.com/c/choju28_0015/choju28_0015.png',
+        reaction: [ // 评论区反应功能，默认为reaction: true,
+          'https://cdn-icons-png.flaticon.com/128/8208/8208813.png', // give me five
+          'https://cdn-icons-png.flaticon.com/128/8208/8208756.png', // 鼓个掌
+          'https://cdn-icons-png.flaticon.com/128/8208/8208902.png', // 不赞成
+          'https://cdn-icons-png.flaticon.com/128/8208/8208766.png', // 祝好运
         ],
         dark: 'html.dark',
         login: "enable", //# 登录模式状态，默认值enable，force可以强制登录
