@@ -18,6 +18,7 @@ const CONFIG = {
 
   waline: {
     visitor: true, //# 文章访问量统计
+    reaction: false, // 是否开启反应，默认true
     lang: "zh-CN",
     login: "enable", //# 登录模式状态，默认值enable，force可以强制登录
     wordLimit: 800, //# 评论字数限制，0为不限制，默认值为0
