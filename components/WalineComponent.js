@@ -28,7 +28,7 @@ const WalineComponent = (props) => {
         el: containerRef.current,
         serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
         lang: siteConfig('LANG'),
-        locale {
+        locale: {
           nick: '昵称',
           nickError: '昵称不能少于3个字符哦...',
           mail: '邮箱',
