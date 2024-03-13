@@ -38,7 +38,21 @@ const WalineComponent = (props) => {
           'https://cdn-icons-png.flaticon.com/128/8208/8208756.png',
           'https://cdn-icons-png.flaticon.com/128/8208/8208902.png',
           'https://cdn-icons-png.flaticon.com/128/8208/8208766.png'
-        ]
+        ],
+        locale: {
+          nick: '昵称',
+          mail: '邮箱',
+          mailError: '请填写正确的邮件地址',
+          link: '您的网址',
+          optional: '可选',
+          placeholder: "何事沉吟？",
+          sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
+          reactionTitle: '击掌！',
+          reaction0: "give me five",
+          reaction1: "鼓个掌",
+          reaction2: "不赞成",
+          reaction3: "祝好运",
+        };
       })
     }
 
