@@ -52,7 +52,7 @@ const WalineComponent = (props) => {
           reaction1: "鼓个掌",
           reaction2: "不赞成",
           reaction3: "祝好运",
-        };
+        },
       })
     }
 
