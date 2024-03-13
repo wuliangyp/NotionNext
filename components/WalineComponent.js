@@ -39,7 +39,6 @@ const WalineComponent = (props) => {
         serverURL: siteConfig('COMMENT_WALINE_SERVER_URL'),
         lang: siteConfig('LANG'),
         locale: {
-          ...locale,
           placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
           sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
           reaction0: "喜歡",
