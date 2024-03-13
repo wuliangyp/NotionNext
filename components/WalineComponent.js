@@ -33,7 +33,12 @@ const WalineComponent = (props) => {
           'https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs',
           'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili'
         ],
-        reaction: false
+        reaction: [
+          'https://cdn-icons-png.flaticon.com/128/8208/8208813.png',
+          'https://cdn-icons-png.flaticon.com/128/8208/8208756.png',
+          'https://cdn-icons-png.flaticon.com/128/8208/8208902.png',
+          'https://cdn-icons-png.flaticon.com/128/8208/8208766.png'
+        ]
       })
     }
 
