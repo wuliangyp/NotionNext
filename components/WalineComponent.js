@@ -62,7 +62,6 @@ const WalineComponent = (props) => {
           "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji",
           "https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs",
           "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili",
-          '//file.66619.eu.org/beluga-emoji',
         ], //自定义表情包
       });
     }
