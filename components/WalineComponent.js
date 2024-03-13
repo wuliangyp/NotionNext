@@ -36,7 +36,6 @@ const WalineComponent = (props) => {
           link: '您的网址',
           optional: '可选',
           placeholder: "何事沉吟？",
-          //  评论框占位提示符，默认'欢迎评论'
           sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
           reactionTitle: '击掌！',
           reaction0: "give me five",
@@ -45,15 +44,10 @@ const WalineComponent = (props) => {
           reaction3: "祝好运",
         },
         reaction: [
-          //  评论区反应功能，默认为reaction: true,
           'https://cdn-icons-png.flaticon.com/128/8208/8208813.png',
-          //  give me five
           'https://cdn-icons-png.flaticon.com/128/8208/8208756.png',
-          //  鼓个掌
           'https://cdn-icons-png.flaticon.com/128/8208/8208902.png',
-          //  不赞成
           'https://cdn-icons-png.flaticon.com/128/8208/8208766.png',
-          //  祝好运
         ],
         dark: 'html.dark',
         emoji: [
@@ -61,7 +55,6 @@ const WalineComponent = (props) => {
           "https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs",
           "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili",
         ],
-        //  自定义表情包
       });
     }
 
