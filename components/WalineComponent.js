@@ -39,17 +39,17 @@ const WalineComponent = (props) => {
         locale: {
           placeholder: "何事沉吟？", //评论框占位提示符，默认'欢迎评论'
           sofa: "你好探险家，这里是人迹罕至的评论区大陆。",
+          reactionTitle: "(〃￣︶￣)人(￣︶￣〃)",
           reaction0: "give me five",
-          //reaction1: "鼓个掌",
-          //reaction2: "不赞成",
-         // reaction3: "祝好运",
+          reaction1: "鼓个掌",
+          reaction2: "不赞成",
+          reaction3: "祝好运",
         },
         reaction: [ // 评论区反应功能，默认为reaction: true,
-          //'https://cdn-icons-png.flaticon.com/128/8208/8208813.png', // give me five
-          //'https://cdn-icons-png.flaticon.com/128/8208/8208756.png', // 鼓个掌
-          //'https://cdn-icons-png.flaticon.com/128/8208/8208902.png', // 不赞成
-          //'https://cdn-icons-png.flaticon.com/128/8208/8208766.png', // 祝好运
-          'https://unpkg.com/@waline/emojis@1.1.0/weibo/weibo_sob.png', //测试
+          'https://cdn-icons-png.flaticon.com/128/8208/8208813.png', // give me five
+          'https://cdn-icons-png.flaticon.com/128/8208/8208756.png', // 鼓个掌
+          'https://cdn-icons-png.flaticon.com/128/8208/8208902.png', // 不赞成
+          'https://cdn-icons-png.flaticon.com/128/8208/8208766.png', // 祝好运
         ],
         dark: 'html.dark',
         login: "enable", //# 登录模式状态，默认值enable，force可以强制登录
