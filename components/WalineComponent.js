@@ -30,9 +30,9 @@ const WalineComponent = (props) => {
         lang: siteConfig('LANG'),
         dark: 'html.dark',
         emoji: [
-          "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji",
-          "https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs",
-          "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili",
+          'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji',
+          'https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs',
+          'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
         ],
         reaction: [
           'https://cdn-icons-png.flaticon.com/128/8208/8208813.png',
