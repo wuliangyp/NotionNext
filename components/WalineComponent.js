@@ -44,10 +44,8 @@ const WalineComponent = (props) => {
           mail: '邮箱 Email',
           mailError: '请填写正确的邮件地址',
           link: '您的网址 Link',
-          optional: '可选',
           login: '登录 Login',
           submit: '发送 Send',
-          meta: ['nick', 'mail', 'link'], //  评论者相关属性，默认['nick', 'mail', 'link']
           requiredMeta: ['nick', 'mail'], //  设置评论者属性必填项，默认[]（即匿名）
           placeholder: '何事沉吟？发一条友善的评论见证当下。（您的电子邮箱地址不会被公开。）\nBe nice and play well with others. (Your email address will remain private and will not be displayed publicly.)',
           sofa: '你好探险家，这里是人迹罕至的评论区大陆。\nBe the first to comment!',
