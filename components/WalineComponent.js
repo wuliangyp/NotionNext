@@ -39,6 +39,9 @@ const WalineComponent = (props) => {
           'https://cdn-icons-png.flaticon.com/128/8208/8208902.png',
           'https://cdn-icons-png.flaticon.com/128/8208/8208766.png'
         ],
+        requiredMeta: ['nick', 'mail'], //  设置评论者属性必填项，默认[]（即匿名）
+        wordLimit: [2, 800], //  评论区字数限制2-800字
+        imageUploader: false,
         locale: {
           nick: '昵称 Name',
           mail: '邮箱 Email',
@@ -46,15 +49,14 @@ const WalineComponent = (props) => {
           link: '您的网址 Link',
           login: '登录 Login',
           submit: '发送 Send',
-          requiredMeta: ['nick', 'mail'], //  设置评论者属性必填项，默认[]（即匿名）
           placeholder: '何事沉吟？发一条友善的评论见证当下。（您的电子邮箱地址不会被公开。）\nBe nice and play well with others. (Your email address will remain private and will not be displayed publicly.)',
-          sofa: '你好探险家，这里是人迹罕至的评论区大陆。\nBe the first to comment!',
-          reactionTitle: '一键心情\nOne-Click Mood',
-          reaction0: '喜歡\nLike',
-          reaction1: '击掌\nHigh Five',
-          reaction2: '鼓掌\nCheers',
-          reaction3: '不贊成\nDisagree',
-          reaction4: '祝好運\nGood luck'
+          sofa: '你好探险家，这里是人迹罕至的评论区大陆。Be the first to comment!',
+          reactionTitle: '一键心情',
+          reaction0: '喜歡',
+          reaction1: '击掌',
+          reaction2: '鼓掌',
+          reaction3: '不贊成',
+          reaction4: '祝好運'
         }
       })
     }
