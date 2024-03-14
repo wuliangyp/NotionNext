@@ -44,6 +44,7 @@ const WalineComponent = (props) => {
         imageUploader: false,
         locale: {
           nick: '昵称 Name',
+          nickError: '请填写昵称',
           mail: '邮箱 Email',
           mailError: '请填写正确的邮件地址',
           link: '您的网址 Link',
