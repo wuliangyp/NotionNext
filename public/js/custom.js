@@ -1,6 +1,6 @@
 // 这里编写自定义js脚本；将被静态引入到页面中
 // Get all <a> tags
-var aTags = document.querySelectorAll('a');
+var aTags = document.querySelectorAll('.notion-gallery-grid a');
 
 // Loop through each <a> tag
 aTags.forEach(function(aTag) {
