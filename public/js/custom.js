@@ -1,11 +1,15 @@
 // 这里编写自定义js脚本；将被静态引入到页面中
-var formAction = document.querySelector('form').getAttribute('action');
+// Get all <a> tags
+var aTags = document.querySelectorAll('a');
 
-var aTags = document.querySelectorAll('.notion-gallery-grid a');
-
+// Loop through each <a> tag
 aTags.forEach(function(aTag) {
-  aTag.closest('.notion-gallery-grid').addEventListener('click', function(event) {
-    event.preventDefault();
-    window.open(formAction);
-  });
+  // Get the nested <form> within the current <a> tag
+  var form = aTag.querySelector('form');
+  
+  // Get the action URL from the nested <form>
+  var formAction = form.getAttribute('action');
+  
+  // Replace the href attribute of the <a> tag with the form's action URL
+  aTag.setAttribute('href', formAction);
 });
