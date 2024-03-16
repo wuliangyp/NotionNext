@@ -15,10 +15,13 @@
     word-break: break-word;
     line-height: 1.5;
 }
-.notion-page-title {
-    font-size: 15px;
-}
 .notion-property.notion-property-text {
     color: #8B8B7A;
     font-size: 13px;
+}
+.notion-page-title {
+    font-size: 15px;
+}
+.notion-page-title-text {
+    font-weight: 600;
 }
