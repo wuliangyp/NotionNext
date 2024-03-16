@@ -6,3 +6,12 @@
 .fa-info:before {
     content: "\f05a";
 }
+
+.notion-collection-card-property:not(:first-child) {
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+.notion-collection-card-property {
+    word-break: break-word;
+    line-height: 1.5;
+}
