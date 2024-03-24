@@ -16,40 +16,46 @@ aTags.forEach(function(aTag) {
 
 
 // 尝试修改图片alt
-const imgBlocks = document.querySelectorAll(".notion-selectable.notion-image-block");
+// Retrieve all image wrappers
+var imageWrappers = document.querySelectorAll('.notion-asset-wrapper-image');
 
-// let's loop through each block and extract the caption and alt text values:
+// Loop through each wrapper
+for (var i = 0; i < imageWrappers.length; i++) {
+  var currentWrapper = imageWrappers[i]; // Current wrapper being processed
 
-for(let i=0;i<imgBlocks.length;i++){
-    const currentImgBlock = imgBlocks[i]; // Get the current block element
-    
-    // Find the <span> tag inside .notranslate div
-    const spanTag = currentImgBlock.getElementsByClassName("notranslate")[0].firstChild;
-    
-    if(!spanTag){ continue; } // Skip if no span tag was found
-    
-    // Split the innerText of the span tag by ' - ' delimiter
-    const [caption, ...rest] = spanTag.innerText.split(' - ');
-    
-    // Join rest array back together to form the alt text
-    const altText = rest.join(' - ').trim();
+  // Locate the caption element
+  var captionEl = currentWrapper.querySelector('.notion-asset-caption');
+
+  // Check if the caption exists
+  if (!captionEl) {
+    console.error(`Error: No caption found for ${currentWrapper}. Skipping.`);
+    continue; // Move onto the next iteration
+  }
+
+  // Isolate the ALT text from the caption
+  var rawAltText = captionEl.textContent;
+  var altTextParts = rawAltText.match(/(?<=-\ )(.*)/); // RegEx pattern to match '- ' followed by text
+  var altText = '';
+
+  // Handle variations in formatting
+  if (altTextParts !== null) {
+    altText = altTextParts[0]; // Assign the captured group to altText
+  } else {
+    altText = rawAltText; // Fallback to full caption text if no hyphen present
+  }
+
+  // Locate the embedded <img> tag
+  var imageTag = currentWrapper.querySelector('img');
+
+  // Verify existence of the <img> tag
+  if (!imageTag) {
+    console.error(`Error: Couldn't find an <img> tag for ${currentWrapper}. Skipping.`);
+    continue; // Proceed to the next iteration
+  }
+
+  // Insert the ALT text into the <img> tag
+  imageTag.setAttribute('alt', altText);
+  console.info(`Successfully added ALT text "${altText}" for ${imageTag}.`);
 }
-
-
-// Create a new <img> element with src, width, height, and alt attributes
-const newImageElement = document.createElement("IMG");
-newImageElement.src = currentImgBlock.getAttribute("data-file-url");
-newImageElement.width = currentImgBlock.style.width || "";
-newImageElement.height = currentImgBlock.style.height || "";
-newImageElement.setAttribute("alt", altText);
-
-// Remove old <img>, insert new <img> with updated properties
-currentImgBlock.removeChild(currentImgBlock.children[0]);
-currentImgBlock.appendChild(newImageElement);
-
-// Select the .notranslate div and remove it entirely
-const translateDiv = currentImgBlock.getElementsByClassName("notranslate")[0];
-translateDiv && translateDiv.parentNode.removeChild(translateDiv);
-
 
 
